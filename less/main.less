@@ -1,0 +1,58 @@
+@grid-col: repeat(auto-fill, minmax(174px, 1fr));
+@shadows: 1 1 20px 0 rgba(0, 0, 0, 0.1);
+@transition-all: 0.15s transform ease;
+@zoom: scale(1.04);
+@aligns: center;
+
+.index-services .services-block {
+  margin-top: 30px;
+}
+.index-services .services-block .row {
+  display: -webkit-flex;
+  display: -ms-grid;
+  -ms-grid-template-columns: @grid-col;
+  -webkit-grid-template-columns: @grid-col;
+  grid-template-columns: @grid-col;
+  display: grid;
+  grid-gap: 24px 21px;
+ border-style: solid;
+ border-width: 0px;
+ border-color: red;
+}
+.index-services .services-block .row .item {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: @aligns;
+  -ms-flex-pack: @aligns;
+  justify-content: @aligns;
+  -webkit-box-align: @aligns;
+  -ms-flex-align: @aligns;
+  align-items: @aligns;
+  height: 205px;
+  box-shadow: @shadows;
+  -webkit-transition: @transition-all;
+  -o-transition: @transition-all;
+  transition: @transition-all;
+ border-style: solid;
+ border-width: 1px;
+ border-color: green;
+}
+.index-services .services-block .row .item:hover {
+  -webkit-transform: @zoom;
+  -moz-transform: @zoom;
+  -ms-transform: @zoom;
+  -o-transform: @zoom;
+  transform: @zoom;
+}
+.index-services .services-block .row .item img {
+  width: 105px;
+ border-width: 0px;
+ border-color: blue;
+}
+.caption {
+  text-align: @aligns;
+  vertical-align: top;
+  margin:25px;
+}
